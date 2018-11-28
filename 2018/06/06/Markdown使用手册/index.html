@@ -740,11 +740,18 @@ The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is mainta
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--&gt;         - 普通箭头</span><br><span class="line">---         - 实线</span><br><span class="line">-.-&gt;        - 虚线箭头</span><br><span class="line">==&gt;         - 粗箭头</span><br><span class="line"></span><br><span class="line">--&gt;|text|   - 箭头中有文本（前面的箭头可以更换）</span><br></pre></td></tr></table></figure>
 <pre><code>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A[Hard edge] --&gt;|Link text| B(Round edge)</span><br><span class="line">B -.-&gt; C&#123;Decision&#125;</span><br><span class="line">C --&gt;|One| D&gt;Result one]</span><br><span class="line">C ==&gt;|Two| E((circle edge))</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-<p><strong>显示为：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A[Hard edge] --&gt;|Link text| B(Round edge)</span><br><span class="line">B -.-&gt; C&#123;Decision&#125;</span><br><span class="line">C --&gt;|One| D&gt;Result one]</span><br><span class="line">C ==&gt;|Two| E((circle edge))</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">graph TB
+A[Hard edge] -->|Link text| B(Round edge)
+B -.-> C{Decision}
+C -->|One| D>Result one]
+C ==>|Two| E((circle edge))</pre>
+<p></p></code></pre><br>
+<strong>显示为：</strong><p></p>
+<pre class="mermaid">graph TB
+A[Hard edge] -->|Link text| B(Round edge)
+B -.-> C{Decision}
+C -->|One| D>Result one]
+C ==>|Two| E((circle edge))</pre>
 <h6 id="732-mermaid的序列图"><a class="markdownIt-Anchor" href="#732-mermaid的序列图"></a> 7.3.2 Mermaid的序列图</h6>
 <p>  序列图。具体可参考 <a href="https://mermaidjs.github.io/sequenceDiagram.html" target="_blank" rel="noopener">https://mermaidjs.github.io/sequenceDiagram.html</a></p>
 <ol>
@@ -756,19 +763,53 @@ The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is mainta
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">activate A   激活A</span><br><span class="line">deactivate A 取消激活A</span><br><span class="line">在Messages后面 +A 激活A</span><br><span class="line">在Messages后面 -A 取消激活A</span><br></pre></td></tr></table></figure>
 <pre><code>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">participant Alice</span><br><span class="line">participant Bob</span><br><span class="line">Alice-&gt;John: Hello John, how are you?</span><br><span class="line">loop Healthcheck</span><br><span class="line">    John-&gt;John: Fight against hypochondria</span><br><span class="line">end</span><br><span class="line">Note right of John: Rational thoughts &lt;br/&gt;prevail...</span><br><span class="line">John--&gt;Alice: Great!</span><br><span class="line">John-&gt;Bob: How about you?</span><br><span class="line">Bob--&gt;John: Jolly good!</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-<p><strong>显示为：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">participant Alice</span><br><span class="line">participant Bob</span><br><span class="line">Alice-&gt;John: Hello John, how are you?</span><br><span class="line">loop Healthcheck</span><br><span class="line">    John-&gt;John: Fight against hypochondria</span><br><span class="line">end</span><br><span class="line">Note right of John: Rational thoughts &lt;br/&gt;prevail...</span><br><span class="line">John--&gt;Alice: Great!</span><br><span class="line">John-&gt;Bob: How about you?</span><br><span class="line">Bob--&gt;John: Jolly good!</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">sequenceDiagram
+participant Alice
+participant Bob
+Alice->John: Hello John, how are you?
+loop Healthcheck
+    John->John: Fight against hypochondria
+end
+Note right of John: Rational thoughts <br>prevail...
+John-->Alice: Great!
+John->Bob: How about you?
+Bob-->John: Jolly good!</pre>
+<p></p></code></pre><br>
+<strong>显示为：</strong><p></p>
+<pre class="mermaid">sequenceDiagram
+participant Alice
+participant Bob
+Alice->John: Hello John, how are you?
+loop Healthcheck
+    John->John: Fight against hypochondria
+end
+Note right of John: Rational thoughts <br>prevail...
+John-->Alice: Great!
+John->Bob: How about you?
+Bob-->John: Jolly good!</pre>
 <h6 id="733-mermaid的甘特图"><a class="markdownIt-Anchor" href="#733-mermaid的甘特图"></a> 7.3.3 Mermaid的甘特图</h6>
 <p>  甘特图。具体可参考 <a href="https://mermaidjs.github.io/gantt.html" target="_blank" rel="noopener">https://mermaidjs.github.io/gantt.html</a></p>
 <pre><code>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">dateFormat YYYY-MM-DD</span><br><span class="line">title 产品计划表</span><br><span class="line">section 初期阶段</span><br><span class="line">明确需求: 2016-03-01,10d</span><br><span class="line">section 中期阶段</span><br><span class="line">跟进开发: 2016-03-11,15d</span><br><span class="line">section 后期阶段</span><br><span class="line">走查测试:2016-03-20,9d</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-<p><strong>显示为：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gantt</span><br><span class="line">dateFormat YYYY-MM-DD</span><br><span class="line">title 产品计划表</span><br><span class="line">section 初期阶段</span><br><span class="line">明确需求: 2016-03-01,10d</span><br><span class="line">section 中期阶段</span><br><span class="line">跟进开发: 2016-03-11,15d</span><br><span class="line">section 后期阶段</span><br><span class="line">走查测试:2016-03-20,9d</span><br></pre></td></tr></table></figure>
+<pre class="mermaid">gantt
+dateFormat YYYY-MM-DD
+title 产品计划表
+section 初期阶段
+明确需求: 2016-03-01,10d
+section 中期阶段
+跟进开发: 2016-03-11,15d
+section 后期阶段
+走查测试:2016-03-20,9d</pre>
+<p></p></code></pre><br>
+<strong>显示为：</strong><p></p>
+<pre class="mermaid">gantt
+dateFormat YYYY-MM-DD
+title 产品计划表
+section 初期阶段
+明确需求: 2016-03-01,10d
+section 中期阶段
+跟进开发: 2016-03-11,15d
+section 后期阶段
+走查测试:2016-03-20,9d</pre>
 <h2 id="8-总结"><a class="markdownIt-Anchor" href="#8-总结"></a> 8 总结</h2>
 <p>  Markdown在我看来是一个用来快速记笔记的语言，当然也可以用来写教程，它和Word不一样的就是，完全可以用代码来实现一篇结构完整的文章啊，多么适合我们这种撸代码的啊！妈妈再也不用担心我被Word的各种奇怪的格式问题支配啦！好吧，激动了，但是说实话，我真的很推荐Markdown，学习成本低，还特别实用。有人说其过于简单，那是因为他们没有研究透，难一点的话和HTML、CSS、JavaScript各种联合起来的话，效果能炫到我们想象不到。<br>
   这是可以说是我第一次写教程，感觉没有想象的那么快，断断续续的花了6天才写完，但是过程还是很享受的，希望我以后能写出更好的教程，自己可以复习，也作出了分享。</p>
@@ -804,7 +845,16 @@ The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is mainta
 
     <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
     
+
 </footer>
+{% if (theme.mermaid.enable)  %}
+  <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+{% endif %}
         </div>
     </div>
 
