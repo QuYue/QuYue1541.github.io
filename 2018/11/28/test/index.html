@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="a 我们都是   SRE_Match:这个对相对保存本次匹配的结果，包含很多关于匹配过称以及匹配结果的信息。 属性：    name means     endpos 本次搜索结束位置索引   lastgroup 本次搜索匹配到的最后一个分组的别名   lastindex 本次搜索匹配到的最后一个分组的索引   pos 本次搜索开始位置索引   re 本次搜索使用的 SRE_Pattern 对象">
+    <meta name="description" content="a 12```pythona = input() 1  12```pythona = input()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="test | 曲丘山の博客">
 <meta property="og:url" content="http://yoursite.com/2018/11/28/test/index.html">
 <meta property="og:site_name" content="曲丘山の博客">
-<meta property="og:description" content="a 我们都是   SRE_Match:这个对相对保存本次匹配的结果，包含很多关于匹配过称以及匹配结果的信息。 属性：    name means     endpos 本次搜索结束位置索引   lastgroup 本次搜索匹配到的最后一个分组的别名   lastindex 本次搜索匹配到的最后一个分组的索引   pos 本次搜索开始位置索引   re 本次搜索使用的 SRE_Pattern 对象">
+<meta property="og:description" content="a 12```pythona = input() 1  12```pythona = input()">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-28T08:24:05.431Z">
+<meta property="og:updated_time" content="2018-11-29T02:32:31.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test | 曲丘山の博客">
-<meta name="twitter:description" content="a 我们都是   SRE_Match:这个对相对保存本次匹配的结果，包含很多关于匹配过称以及匹配结果的信息。 属性：    name means     endpos 本次搜索结束位置索引   lastgroup 本次搜索匹配到的最后一个分组的别名   lastindex 本次搜索匹配到的最后一个分组的索引   pos 本次搜索开始位置索引   re 本次搜索使用的 SRE_Pattern 对象">
+<meta name="twitter:description" content="a 12```pythona = input() 1  12```pythona = input()">
     
     
     
@@ -174,66 +174,11 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h1 id="a"><a class="markdownIt-Anchor" href="#a"></a> a</h1>
-<p>我们都是</p>
-<ul>
-<li>
-<p>SRE_Match:这个对相对保存本次匹配的结果，包含很多关于匹配过称以及匹配结果的信息。<br>
-属性：</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>means</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>endpos</td>
-<td>本次搜索结束位置索引</td>
-</tr>
-<tr>
-<td>lastgroup</td>
-<td>本次搜索匹配到的最后一个分组的别名</td>
-</tr>
-<tr>
-<td>lastindex</td>
-<td>本次搜索匹配到的最后一个分组的索引</td>
-</tr>
-<tr>
-<td>pos</td>
-<td>本次搜索开始位置索引</td>
-</tr>
-<tr>
-<td>re</td>
-<td>本次搜索使用的 SRE_Pattern 对象</td>
-</tr>
-<tr>
-<td>regs</td>
-<td>列表，元素为元组，包含本次搜索匹配到的所有分组的起止位置</td>
-</tr>
-<tr>
-<td>string</td>
-<td>本次搜索操作的字符串</td>
-</tr>
-</tbody>
-</table>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'Hello, Mr.Gumby : 2016/10/26'</span></span><br><span class="line">m = re.search(<span class="string">', (?P&lt;name&gt;\w+\.\w+).*?(\d+)'</span>, s)</span><br><span class="line"><span class="comment"># 本次搜索的结束位置索引</span></span><br><span class="line">print(m.endpos)</span><br><span class="line"><span class="comment"># output&gt; 28</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本次搜索匹配到的最后一个分组的别名</span></span><br><span class="line"><span class="comment"># 本次匹配最后一个分组没有别名</span></span><br><span class="line">print(m.lastgroup)</span><br><span class="line"><span class="comment"># output&gt; None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本次搜索匹配到的最后一个分组的索引</span></span><br><span class="line">print(m.lastindex)</span><br><span class="line"><span class="comment"># output&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本次搜索开始位置索引</span></span><br><span class="line">print(m.pos)</span><br><span class="line"><span class="comment"># output&gt; 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本次搜索使用的 SRE_Pattern 对象</span></span><br><span class="line">print(m.re)</span><br><span class="line"><span class="comment"># output&gt; &lt;_sre.SRE_Pattern object at 0x000000000277E158&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表，元素为元组，包含本次搜索匹配到的所有分组的起止位置 第一个元组为正则表达式匹配范围</span></span><br><span class="line">print(m.regs)</span><br><span class="line"><span class="comment"># output&gt; ((7, 22), (7, 15), (18, 22))</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本次搜索操作的字符串</span></span><br><span class="line">print(m.string)</span><br><span class="line"><span class="comment"># output&gt; Hello, Mr.Gumby : 2016/10/26</span></span><br></pre></td></tr></table></figure>
-<p>函数：</p>
-<ul>
-<li>end([group=0]) 返回指定分组的结束位置，默认返回<strong>正则表达式所匹配到的最后一个字符的索引</strong></li>
-<li>expand(template) 根据模版返回相应的字符串，类似与sub函数里面的repl，可使用\1或者\g<name>来选择分组</name></li>
-<li>group([group1, …]) 根据提供的索引或名字返回响应分组的内容，默认返回 start() 到 end() 之间的字符串， 提供多个参数将返回一个元组</li>
-<li>groupdict([default=None]) 返回 返回一个包含所有匹配到的命名分组的字典，没有命名的分组不包含在内，key为组名，value为匹配到的内容，参数default为没有参与本次匹配的命名分组提供默认值</li>
-<li>groups([default=None])以元组形式返回每一个分组匹配到的字符串，包括没有参与匹配的分组，其值为default</li>
-<li>span([group]) 返回指定分组的起止位置组成的元组，默认返回由start()和end()组成的元组</li>
-<li>start([group]) 返回指定分组的开始位置，默认返回**正则表达式所匹配到的第一个</li>
-</ul>
-</li>
-</ul>
-<h1 id="b"><a class="markdownIt-Anchor" href="#b"></a> b</h1>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```python</span><br><span class="line">a = input()</span><br></pre></td></tr></table></figure>
+<pre><code>1
+</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```python</span><br><span class="line">a = input()</span><br></pre></td></tr></table></figure>
   </section>
-
   <section class="post-comments">
 
     <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
@@ -246,7 +191,7 @@ classes that you can use:
 
             <footer class="footer">
 
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    <span class="footer__copyright">&copy; 2018. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 本人基于<a href="https://github.com/someus/huno">Huno</a>主题进行改良</span>
     
 
 </footer>
@@ -257,7 +202,7 @@ classes that you can use:
     $.awesome_toc({        
       autoDetectHeadings: true,
       enableToTopButton: true,
-      title: "INDEX",
+      title: "文章目录",
       css: {
           fontSize: "14px",
           largeFontSize: "18px",
@@ -308,6 +253,10 @@ classes that you can use:
 
     
     
+
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+
+
     <!--kill ie6 -->
 <!--[if IE 6]>
   <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
